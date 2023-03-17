@@ -1,0 +1,93 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(img/nkar.jpg);
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(211, 207, 7);
+    font-weight: 900;
+    font-size:60px;
+}
+
+#people-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.person{
+    background:linear-gradient( to right,rgba(255,0,0,1),rgb(25, 0, 255),rgba(255,0,0,0) );
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+.person h2{
+    text-align: center;
+}
+
+#pagination{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#pagination button{
+    background-color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    padding: 10px 15px;
+    transition: background-color 0.2s ease;
+}
+
+#pagination button:hover{
+    background-color: #f7f7f7;
+    color: #000000;
+}
+
+#pagination button.active{
+    background-color: #d4d111;
+    color: #000000;
+}
+
+#loading-spinner{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 8px solid rgb(238, 255, 0);
+    border-top: 8px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.0);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+.loading-spinner-visible{
+    display: block !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
